@@ -26,6 +26,9 @@ public class Article implements Serializable{
 	@ManyToOne
 	@JoinColumn(name = "idCategory")
 	private Category category;
+	public Article() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public String getCodeArticle() {
 		return codeArticle;

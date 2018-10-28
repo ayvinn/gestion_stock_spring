@@ -1,11 +1,13 @@
 package com.stock.mvc.entities;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 @Entity
 public class Fournisseur implements Serializable{
@@ -17,10 +19,20 @@ public class Fournisseur implements Serializable{
 	private String adresse;
 	private String photo;
 	private String mail;
+	@OneToMany(mappedBy = "fournisseur")
+	private List<CommandeFournisseur> commandeFournisseur;
 	
 	public Fournisseur() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+	public List<CommandeFournisseur> getCommandeFournisseur() {
+		return commandeFournisseur;
+	}
+
+	public void setCommandeFournisseur(List<CommandeFournisseur> commandeFournisseur) {
+		this.commandeFournisseur = commandeFournisseur;
 	}
 
 	public String getNom() {

@@ -1,11 +1,14 @@
 package com.stock.mvc.entities;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 @Entity
 public class Client implements Serializable{
@@ -17,7 +20,17 @@ public class Client implements Serializable{
 	private String adresse;
 	private String photo;
 	private String mail;
+	@OneToMany(mappedBy = "client")
+	private List<CommandeClient> commandeClient;
 	
+	public List<CommandeClient> getCommandeClient() {
+		return commandeClient;
+	}
+
+	public void setCommandeClient(List<CommandeClient> commandeClient) {
+		this.commandeClient = commandeClient;
+	}
+
 	public Long getIdClient() {
 		return idClient;
 	}

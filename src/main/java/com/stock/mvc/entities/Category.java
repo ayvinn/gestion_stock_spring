@@ -18,6 +18,9 @@ public class Category implements Serializable{
 	private String designation;
 	@OneToMany(mappedBy = "category")
 	private List<Article> articles;
+	public Category() {
+		// TODO Auto-generated constructor stub
+	}
 	public Long getIdCategory() {
 		return idCategory;
 	}
