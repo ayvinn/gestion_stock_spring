@@ -11,7 +11,7 @@ import javax.persistence.Query;
 import com.stock.mvc.DAO.IGenericDAO;
 import com.sun.org.apache.xalan.internal.xsltc.runtime.Parameter;
 @SuppressWarnings("unchecked")
-public class GenericDaoImp<E> implements IGenericDAO<E> {
+public class GenericDaoImpl<E> implements IGenericDAO<E> {
 	@PersistenceContext
 	EntityManager em;
 	
@@ -23,7 +23,7 @@ public class GenericDaoImp<E> implements IGenericDAO<E> {
 		return type;
 	}
 
-	public GenericDaoImp() {
+	public GenericDaoImpl() {
 		Type t = getClass().getGenericSuperclass();
 		ParameterizedType pt= (ParameterizedType) t;
 		type =(Class<E>) pt.getActualTypeArguments()[0];
