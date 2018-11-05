@@ -1,5 +1,8 @@
 package com.stock.mvc.DAO.impl;
 
-public class LigneVenteDaoImpl {
+import com.stock.mvc.DAO.ILigneVente;
+import com.stock.mvc.entities.LigneVente;
+
+public class LigneVenteDaoImpl extends GenericDaoImpl<LigneVente> implements ILigneVente{
 
 }
