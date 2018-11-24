@@ -69,7 +69,7 @@
     <!-- Metis Menu Plugin JavaScript -->
     <script src="<%= request.getContextPath()%>/resources/vendor/metisMenu/metisMenu.min.js"></script>
 
-    <!-- Custom Theme JavaScript -->
+    <!-- Custom Theme JavaScriipt -->
     <script src="<%= request.getContextPath()%>/resources/dist/js/sb-admin-2.js"></script>
 
 </body>
